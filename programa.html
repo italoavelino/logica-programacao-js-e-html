@@ -2,29 +2,30 @@
 
 <script>
 
+	function pularLinha()
+	{
+		document.write("<br>");
+	}
+
+	function mostrar(texto)
+	{
+		document.write(texto);
+		pularLinha();
+	}
+
 	var ano = 2022;
 
-	document.write("Ítalo tem " + (ano - 2000) + " anos");
-	document.write("<br>");
-	document.write("João Vitor tem " + (ano - 2013) + " anos");
-	document.write("<br>");
+	mostrar("Ítalo tem " + (ano - 2000) + " anos");
+	pularLinha();
+
+	mostrar("João Vitor tem " + (ano - 2013) + " anos");
+	pularLinha();
 
 	ano = 2023;
 
-	document.write("Thaise tem " + (ano - 1990) + " anos");
-	document.write("<br>");
+	mostrar("Thaise tem " + (ano - 1990) + " anos");
+	pularLinha();
 
-	var idadeItalo = 22;
-	var idadeJoao = 9;
-	var idadeThaise = 33;
-
-	var media = (idadeItalo + idadeJoao + idadeThaise)/3;
-
-	document.write("A média das idades é " + Math.round(media));
-
-	var nome = "Ítalo";
-
-	document.write("<br>");
-	document.write("A idade de " + nome + " é " + idadeItalo);
+	mostrar("Olá pessoal!");
 
 </script>

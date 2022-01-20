@@ -1,0 +1,22 @@
+<meta charset="UTF-8">
+
+<script>
+
+	function pularLinha()
+	{
+		document.write("<br>");
+	}
+
+	function mostrar(texto)
+	{
+		document.write(texto);
+		pularLinha();
+	}
+
+	var anoAtual = 2022;
+	var mediaIdadeDeTerFilhos = 28;
+	var quantidadeGeracoes = (anoAtual - 1500) / mediaIdadeDeTerFilhos;
+
+	mostrar("No ano de " + anoAtual + " se passaram " + Math.round(quantidadeGeracoes) + " gerações dês de a chegada dos Portugueses.")
+
+</script>
