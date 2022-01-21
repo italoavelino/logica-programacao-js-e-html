@@ -14,8 +14,13 @@
 		pularLinha();
 	}
 
-    var numeroPensado = Math.round(Math.random() * 10);
-    console.log(numeroPensado);
+    function sortear(numeroMaximoSorteio)
+    {
+        return numeroPensado = Math.round(Math.random() * numeroMaximoSorteio);
+    }
+
+    var numeroPensado = sortear(10);
+    console.log(numeroPensado)
 
     var chute = parseInt(prompt("Digite o seu chute!"));
 
@@ -26,7 +31,15 @@
 
     else
     {
-        mostrar("Você errou, o número pensado foi " + numeroPensado);
+        if (chute > numeroPensado)
+        {
+            mostrar("Você errou, o numero que você chutou é maior do que o pensado!");
+        }
+    
+        else
+        {
+            mostrar("Você errou, o numero que você chutou é menor do que o pensado!");
+        }
     }
 
 </script>
