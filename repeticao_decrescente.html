@@ -1,0 +1,27 @@
+<meta charset="UTF-8">
+
+<script>
+
+	function pularLinha()
+	{
+		document.write("<br>");
+		document.write("<br>");
+	}
+
+	function mostrar(texto)
+	{
+		document.write(texto);
+		pularLinha();
+	}
+
+    var contador = 20;
+
+    while(contador >= 0)
+    {
+        mostrar(contador);
+        contador -= 1;
+    }
+
+    mostrar("FIM");
+
+</script>

@@ -1,0 +1,27 @@
+<meta charset="UTF-8">
+
+<script>
+
+	function pularLinha()
+	{
+		document.write("<br>");
+		document.write("<br>");
+	}
+
+	function mostrar(texto)
+	{
+		document.write(texto);
+		pularLinha();
+	}
+
+    var contador = 2;
+
+    while(contador <= 100)
+    {
+        mostrar("O numero " + contador + " é um número par que pertence ao conjunto 1 a 100.");
+        contador += 2;
+    }
+
+    mostrar("FIM");
+
+</script>
