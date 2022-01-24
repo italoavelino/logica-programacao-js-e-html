@@ -5,22 +5,69 @@
 
 <script>
 
-    var segredo = Math.round((Math.random() * 10));
+    function sorteia ()
+    {
+        return Math.round(Math.random() * 10);
+    }
+
+    function sorteioNumeros(quantidade)
+    {
+        var segredos = [];
+
+        var i = 0
+
+        while(i < quantidade)
+        {
+            var numeroAleatorio = sorteia();
+
+            var achou = false
+
+            for(var j = 0; j < segredos.length; j++)
+            {
+                if(numeroAleatorio == segredos[j])
+                {
+                    achou = true;
+                    break;
+                }
+            }
+
+            if(achou == false && numeroAleatorio != 0)
+            {
+                segredos.push(numeroAleatorio);
+                i++;
+            }
+        }
+
+        return segredos;
+    }
+
+
+    var segredos = sorteioNumeros(10);
+
+    console.log(segredos);
 
     var input = document.querySelector("input");
     input.focus();
 
-    function verifica()
+    function verifica() 
     {
-        if(input.value == segredo)
+        var achou = false;
+
+        for(var posicao = 0; posicao < segredos.length; posicao++)
         {
-            alert("Você ACERTOU!");
-        }
-        else
-        {
-            alert("Você ERROU!!!");
+            if(input.value == segredos[posicao])
+            {
+                alert("Você ACERTOU!");
+                achou = true;
+                break;
+            }
         }
 
+        if(achou == false)
+        {
+            alert("Você ERROU!");
+        }
+        
         input.value = "";
         input.focus();
     }
