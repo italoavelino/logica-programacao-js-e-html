@@ -20,26 +20,28 @@
     }
 
     var numeroPensado = sortear(10);
-    console.log(numeroPensado)
 
-    var chute = parseInt(prompt("Digite o seu chute!"));
+    var tentativas = 1;
 
-    if (chute == numeroPensado)
+    while(tentativas <= 3)
     {
-        mostrar("Você acertou!");
-    }
-
-    else
-    {
-        if (chute > numeroPensado)
+        var chute = parseInt(prompt("Digite o seu chute!"));
+    
+        if (chute == numeroPensado)
         {
-            mostrar("Você errou, o numero que você chutou é maior do que o pensado!");
+            mostrar("Você ACERTOU, o número pensado era " + numeroPensado);
+            break;
         }
     
         else
         {
-            mostrar("Você errou, o numero que você chutou é menor do que o pensado!");
+            mostrar("Você ERROU!");
         }
+
+        tentativas++;
     }
+
+    mostrar("FIM");
+
 
 </script>
